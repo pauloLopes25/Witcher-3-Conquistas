@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Witcher 3: Conquistas</title>
+    <link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c78bc3fc-9f08-47ca-81ae-d89055c7ec49/d8p7ijl-5b8a9dc7-1e8c-400d-8340-293fab54cbc0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M3OGJjM2ZjLTlmMDgtNDdjYS04MWFlLWQ4OTA1NWM3ZWM0OVwvZDhwN2lqbC01YjhhOWRjNy0xZThjLTQwMGQtODM0MC0yOTNmYWI1NGNiYzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.u42bYy4LQx5RCEPnhxot6g4baINnJ2WvYL7J6v76-1w">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">Witcher 3 Conquistas</h2>
+  <input type="text" id="myInput" placeholder="conquista...">
+  <span onclick="newElement()" class="addBtn">Adiciona</span>
+</div>
+
+<ul id="myUL">
+  <li class="checked">Lilás e groselha</li>
+  <li class="checked">O carniceiro de Blaviken</li>
+  <li class="checked">Vamos Cozinhar!</li>
+  <li class="checked">Na raça</li>
+  <li class="checked">Elegância</li>
+  <li class="checked">Rato de Biblioteca</li>
+  <li class="checked">Terapeuta de Familia</li>
+  <li class="checked">Amizade Colorida</li>
+  <li class="checked">Carga explosiva</li>
+  <li class="checked">Ameaça Tripla</li>
+  <li class="checked">Amigo é para essas coisas</li>
+  <li class="checked">A plenos pulmões</li>
+  <li class="checked">Complô contra a natureza</li>
+  <li class="checked">Necromante</li>
+  <li class="checked">Bomba, bomba, olha a bomba</li>
+  <li class="checked">Mutante</li>
+  <li class="checked">Realeza</li>
+  <li class="checked">Algo mais</li>
+  <li class="checked">Andarilho</li>
+  <li class="checked">Dois é demais</li>
+  <li>Que gracinha</li>
+  <li class="checked">Marionete</li>
+  <li class="checked">O rei esta morto</li>
+  <li class="checked">Passou no Teste</li>
+  <li class="checked">O caça-vampiros</li>
+  <li>Do pó ao pó</li>
+  <li class="checked">Não vou beijar isso</li>
+  <li>Rapaziada</li>
+  <li>O bruxo está à solta</li>
+  <li>Amizade dolorida</li>
+  <li>Armado e perigoso</li>
+  <li>Pact sunt servanda</li>
+  <li>Geralt e Cia.</li>
+  <li>Apostar tudo</li>
+  <li class="checked">Regicida</li>
+  <li>Encrenqueiro</li>
+  <li>A arma "B"</li>
+  <li>Encrenqueiro de primeira</li>
+  <li>Brincando de casinha</li>
+  <li>O ultimo grande Herói</li>
+  <li>Mó estiloso, mano!</li>
+  <li>Espirito do bosque</li>
+  <li>A encarnação das cinco virtudes</li>
+  <li>Campeão dos campeões</li>
+  <li>Mestre do Gwent</li>
+  <li>Curador de pesadelos</li>
+  <li>Geralt: Bruxo profissional</li>
+  <li>A todo o gás</li>
+  <li class="checked">O que é justo, é justo</li>
+  <li>Colhendo as vinhas da ira</li>
+  <li>Viciado em compras</li>
+  <li>Vestido para matar</li>
+  <li>Dedetização</li>
+  <li>Que os bons tempos continuem</li>
+  <li>Não deixar pedra sobre pedra</li>
+  <li>Quanto mais gwent melhor</li>
+  <li>Dendrólogo</li>
+  <li>Rosa selvagem sem espinhos</li>
+  <li class="checked">Superou o desafio</li>
+  <li>Mandou ver</li>
+  <li class="checked">Poder para dar e vender</li>
+  <li>Colecionador de cartas</li>
+  <li class="checked">Treinado em Khaer Morhen</li>
+  <li>Posso largar quando quiser</li>
+  <li>Seguiu o caminho</li>
+  <li class="checked">Retomar ao remetente</li>
+  <li>Maldade é pouca bobagem</li>
+  <li>Exagero</li>
+  <li>Freguês do xadrez</li>
+  <li class="checked">O inimigo do meu inimigo</li>
+  <li>Davi e Golyat</li>
+  <li>Bovinocida</li>
+  <li>Pode isso, Arnaldo?</li>
+  <li>Vestia ofieri bem antes de estar na moda</li>
+  <li>Quando são muitos contra um...</li>
+  <li>Hasta la Vista</li>
+  <li>Sai de baixo</li>
+  <li>Atirador de elite</li> 
+</ul>
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
